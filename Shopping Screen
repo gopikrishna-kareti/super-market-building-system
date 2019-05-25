@@ -1,0 +1,204 @@
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+public class Main2Activity extends AppCompatActivity {
+    EditText aa, bb, cc, dd, ee, ff, gg, hh, ii;
+    double n, m, o, p, q, r, s, t, u;
+    double mm, nn, oo, pp, qq, rr, ss, tt, uu, vv;
+    TextView po;
+    Button button;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+
+        aa = findViewById(R.id.aa);
+        bb = findViewById(R.id.bb);
+        cc = findViewById(R.id.cc);
+        dd = findViewById(R.id.dd);
+        ee = findViewById(R.id.ee);
+        ff = findViewById(R.id.ff);
+        gg = findViewById(R.id.gg);
+        hh = findViewById(R.id.hh);
+        ii = findViewById(R.id.ii);
+        po = findViewById(R.id.po);
+        button = findViewById(R.id.button);
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s1;
+                s1=aa.getText().toString();
+                if (s1.isEmpty())
+                    n=0;
+                else
+                n = Double.parseDouble(s1);
+                s1=bb.getText().toString();
+                if (s1.isEmpty())
+                    m=0;
+                else
+                m = Double.parseDouble(s1);
+                s1=cc.getText().toString();
+                if (s1.isEmpty())
+                    o=0;
+                else
+                o = Double.parseDouble(s1);
+                s1=dd.getText().toString();
+                if (s1.isEmpty())
+                    p=0;
+                else
+                p = Double.parseDouble(s1);
+                s1=ee.getText().toString();
+                if (s1.isEmpty())
+                    q=0;
+                else
+                q = Double.parseDouble(s1);
+                s1=ff.getText().toString();
+                if (s1.isEmpty())
+                    r=0;
+                else
+                r = Double.parseDouble(s1);
+                s1=gg.getText().toString();
+                if (s1.isEmpty())
+                    s=0;
+                else
+                s = Double.parseDouble(s1);
+                s1=hh.getText().toString();
+                if (s1.isEmpty())
+                    t=0;
+                else
+                t = Double.parseDouble(s1);
+                s1=ii.getText().toString();
+                if (s1.isEmpty())
+                    u=0;
+                else
+                u = Double.parseDouble(s1);
+
+
+                mm = n * 35;
+                nn = m * 100;
+                oo = o * 200;
+                pp = p * 1500;
+                qq = q * 200;
+                rr = r * 200;
+                ss = s * 50;
+                tt = t * 250;
+                uu = u * 10;
+                vv = mm + nn + oo + qq + rr + ss + tt + uu;
+                po.setText((String.valueOf(vv)));
+
+            }
+        });
+        aa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double n = Double.parseDouble(aa.getText().toString());
+                if (10-n < 0) {
+                    Toast.makeText(getApplicationContext(), "running out of stock", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), String.valueOf(10 - n), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        bb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                double n=Double.parseDouble(bb.getText().toString());
+                if (10-n < 0) {
+                    Toast.makeText(getApplicationContext(), "running out of stock", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), String.valueOf(10 - n), Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+        cc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                double n=Double.parseDouble(cc.getText().toString());
+                if (10-n < 0) {
+                    Toast.makeText(getApplicationContext(), "running out of stock", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), String.valueOf(10 - n), Toast.LENGTH_LONG).show();
+                }
+                            }
+        });
+        dd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                double n=Double.parseDouble(dd.getText().toString());
+                if (10-n < 0) {
+                    Toast.makeText(getApplicationContext(), "running out of stock", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), String.valueOf(10 - n), Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+        ee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                double n=Double.parseDouble(ee.getText().toString());
+
+                Toast.makeText(getApplicationContext(),String.valueOf(10-n),Toast.LENGTH_LONG).show();
+            }
+        });
+        ff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                double n=Double.parseDouble(ff.getText().toString());
+                if (10-n < 0) {
+                    Toast.makeText(getApplicationContext(), "running out of stock", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), String.valueOf(10 - n), Toast.LENGTH_LONG).show();
+                }
+
+
+            }
+        });
+        gg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                double n=Double.parseDouble(gg.getText().toString());
+                if (10-n < 0) {
+                    Toast.makeText(getApplicationContext(), "running out of stock", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), String.valueOf(10 - n), Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+        hh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                double n=Double.parseDouble(hh.getText().toString());
+                if (10-n < 0) {
+                    Toast.makeText(getApplicationContext(), "running out of stock", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), String.valueOf(10 - n), Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+        ii.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                double n=Double.parseDouble(ii.getText().toString());
+                if (10-n<0)
+                    Toast.makeText(getApplicationContext(),"running out of stock",Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(getApplicationContext(),String.valueOf(10-n),Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+}
